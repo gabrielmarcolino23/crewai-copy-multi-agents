@@ -3,9 +3,12 @@ from crewai import Agent, Crew, Process, Task, LLM
 from crewai.project import CrewBase, agent, crew, task
 from crewai_tools import DOCXSearchTool
 
-
 from dotenv import load_dotenv
 load_dotenv()
+
+import agentops
+agentops.init()
+
 
 model = os.getenv("OPENAI_MODEL_NAME")
 temperature = os.getenv("OPENAI_MODEL_TEMPERATURE")
@@ -14,7 +17,7 @@ llm = LLM(model=model, temperature=temperature)
 @CrewBase
 class CopywhatsappCrew():
 	"""Copywhatsapp crew"""
-
+	
 	@agent
 	def promptBuilder(self) -> Agent:
 		return Agent(
@@ -33,7 +36,7 @@ class CopywhatsappCrew():
 	def copywriter(self) -> Agent:
 		return Agent(
 			config=self.agents_config['copywriter'],
-			tools=[DOCXSearchTool(docx='docs/exemplos.docx')],
+			# tools=[DOCXSearchTool(docx='docs/exemplos.docx')],
 			verbose=True
 		)
 

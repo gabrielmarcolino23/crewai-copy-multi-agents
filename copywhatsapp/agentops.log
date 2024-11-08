@@ -1,0 +1,23 @@
+2024-11-08 14:12:43,548 - INFO - Session Replay: https://app.agentops.ai/drilldown?session_id=2e968f50-f63e-484f-b99c-78e478edb57e
+2024-11-08 14:12:47,015 - INFO - Session Replay: https://app.agentops.ai/drilldown?session_id=815794a9-4a65-4366-bd4f-2b99539a6198
+2024-11-08 14:12:47,825 - WARNING - Multiple sessions detected. You must use session.create_agent(). More info: https://docs.agentops.ai/v1/concepts/core-concepts#session-management
+2024-11-08 14:12:47,825 - WARNING - Error: 'NoneType' object has no attribute 'create_agent'
+2024-11-08 14:12:47,825 - WARNING - Failed to track an agent with the @track_agent decorator.
+2024-11-08 14:12:47,835 - WARNING - Multiple sessions detected. You must use session.create_agent(). More info: https://docs.agentops.ai/v1/concepts/core-concepts#session-management
+2024-11-08 14:12:47,835 - WARNING - Error: 'NoneType' object has no attribute 'create_agent'
+2024-11-08 14:12:47,835 - WARNING - Failed to track an agent with the @track_agent decorator.
+2024-11-08 14:12:47,851 - WARNING - Multiple sessions detected. You must use session.create_agent(). More info: https://docs.agentops.ai/v1/concepts/core-concepts#session-management
+2024-11-08 14:12:47,852 - WARNING - Error: 'NoneType' object has no attribute 'create_agent'
+2024-11-08 14:12:47,852 - WARNING - Failed to track an agent with the @track_agent decorator.
+2024-11-08 14:12:55,095 - WARNING - Multiple sessions detected. You must use session.record(). More info: https://docs.agentops.ai/v1/concepts/core-concepts#session-management
+2024-11-08 14:12:55,096 - ERROR - Could not record event. Start a session by calling agentops.start_session().
+2024-11-08 14:12:55,278 - WARNING - Multiple sessions detected. You must use session.record(). More info: https://docs.agentops.ai/v1/concepts/core-concepts#session-management
+2024-11-08 14:12:55,279 - ERROR - Could not record event. Start a session by calling agentops.start_session().
+2024-11-08 14:12:57,994 - WARNING - Multiple sessions detected. You must use session.record(). More info: https://docs.agentops.ai/v1/concepts/core-concepts#session-management
+2024-11-08 14:12:57,995 - ERROR - Could not record event. Start a session by calling agentops.start_session().
+2024-11-08 14:12:58,006 - WARNING - Failed to track an agent None with the @track_agent decorator.
+2024-11-08 14:12:58,006 - WARNING - Failed to track an agent None with the @track_agent decorator.
+2024-11-08 14:12:58,006 - WARNING - Failed to track an agent None with the @track_agent decorator.
+2024-11-08 14:12:58,006 - WARNING - Could not end session - multiple sessions detected. You must use session.end_session() instead of agentops.end_session() More info: https://docs.agentops.ai/v1/concepts/core-concepts#session-management
+2024-11-08 14:12:59,789 - INFO - Session Stats - Duration: 15.3s | Cost: $0.00 | LLMs: 0 | Tools: 0 | Actions: 0 | Errors: 0
+2024-11-08 14:12:59,789 - INFO - Session Replay: https://app.agentops.ai/drilldown?session_id=2e968f50-f63e-484f-b99c-78e478edb57e

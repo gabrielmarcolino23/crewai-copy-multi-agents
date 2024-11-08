@@ -8,13 +8,15 @@ promptBuilder_task:
     - Tom de voz: {tom_de_voz}
     - Público-alvo: {publico_alvo}
   agent: promptBuilder
+  async_execution: True
 
 variableSuggester_task:
   description: >
-    Analisar o objetivo da campanha, o tom de voz e o público-alvo para identificar as variáveis mais relevantes para personalização, entre as disponíveis no CRM Zoppy.
+    Analisar o objetivo da campanha: ({objetivo}), o tom de voz: ({tom_de_voz}) e o público-alvo: ({publico_alvo}) para identificar as variáveis mais relevantes para personalização, entre as disponíveis no CRM Zoppy.
   expected_output: >
     Uma lista de variáveis recomendadas, como [client_first_name], [last_purchase_date], etc., com base no propósito da campanha e o público-alvo. O output deve ajudar o agente writer a criar uma copy personalizada e relevante.
   agent: variableSuggester
+  async_execution: True
 
 copywriter_task:
   description: >
@@ -23,4 +25,7 @@ copywriter_task:
     Uma mensagem em português, com até 550 caracteres, que inclua variáveis apropriadas sugeridas pelo agente variableSuggester (ex.: [client_first_name], [last_purchase_date], etc.) e se adapte ao contexto e tom de voz solicitado. 
     A copy deve sempre incluir quebras de linha apropriadas para otimizar a legibilidade no WhatsApp, engajando o público-alvo de forma eficaz e clara.
   agent: copywriter
+  context: [promptBuilder_task, variableSuggester_task]
+  async_execution: False
+  
 
